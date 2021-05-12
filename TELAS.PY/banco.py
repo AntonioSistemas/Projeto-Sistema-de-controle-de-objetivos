@@ -23,4 +23,3 @@ def cadastrar_usuario(nome, e_mail, senha):
                         cursor.rollback()
                         cursor.close()
 
-
