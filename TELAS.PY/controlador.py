@@ -1,8 +1,7 @@
 from PyQt5 import uic,QtWidgets,QtGui
-import mysql.connector
+import mysql.connector 
 
-
-#METODO CONEXÃO COM O BANCO
+#                                           METODO CONEXÃO COM O BANCO
 conexão=mysql.connector.connect(
         host='localhost',
         user='root',
@@ -19,7 +18,7 @@ conexão=mysql.connector.connect(
 #
 #
 #
-#METODOS PARA CHAMAR AS TELAS COM BOTOES. 
+#                                  METODOS PARA CHAMAR AS TELAS COM BOTOES. 
 #*************************************************************************************
 #------------------------------------------------------------------------------------------------------------------
 def chama_meus_objetivos():
@@ -59,11 +58,8 @@ def chama_dados_conta():
     #DADOS_CONTA.B_editar_nome.clicked.connect()
     #DADOS_CONTA.B_excluir_nome.clicked.connect()
     #DADOS_CONTA.B_editar_senha.clicked.connect()
-    #DADOS_CONTA.B_excluir_senha.clicked.connect()
-
-
-    
-#-------------------------------------------------------------------------------------------------------------
+    #DADOS_CONTA.B_excluir_senha.clicked.connect()    
+#--------------------------------------------------------------------------------------------------------------
 def chama_login():
     PERFIL.close()
     CADASTRAR.close()
@@ -98,7 +94,7 @@ def chama_cadastro():
 #
 #
 #
-#METODOS CRUD
+#                                         METODOS CRUD USUARIO
 #*****************************************************************************************************
 
 def cadastrando_usuario ():
@@ -108,7 +104,7 @@ def cadastrando_usuario ():
     c_senha = CADASTRAR.C_ConfirmarSenha.text()
 
     if (c_senha == senha):
-        comandoSQL = " INSERT INTO usuário(nome, e_mail, senha)VALUES (%s,%s,%s )"
+        comandoSQL = " INSERT INTO aluno(nome, e_mail, senha)VALUES (%s,%s,%s )"
         valores=(nome,e_mail,senha)
         try:
             cursor=conexão.cursor()
@@ -121,7 +117,9 @@ def cadastrando_usuario ():
     else:
         print ('As senhas digitadas são diferentes')
 
-#
+
+    
+# 
 #
 #
 #
@@ -134,7 +132,7 @@ def cadastrando_usuario ():
 #
 #
 
-#IMPORTANDO TELAS. 
+#                                      IMPORTANDO TELAS. 
 #*****************************************************************************************************
 
 app=QtWidgets.QApplication([])
