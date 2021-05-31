@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(764, 523)
+        Dialog.resize(768, 532)
         self.B_Sair = QtWidgets.QPushButton(Dialog)
         self.B_Sair.setGeometry(QtCore.QRect(0, 470, 41, 23))
         self.B_Sair.setStyleSheet("background-color: rgb(113, 229, 231);")

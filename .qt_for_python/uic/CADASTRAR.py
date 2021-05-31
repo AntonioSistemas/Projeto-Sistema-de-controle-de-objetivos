@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(701, 529)
+        Dialog.resize(705, 538)
         self.background = QtWidgets.QLabel(Dialog)
         self.background.setGeometry(QtCore.QRect(-10, -30, 741, 571))
         self.background.setStyleSheet("background-color: rgb(170, 197, 255);")

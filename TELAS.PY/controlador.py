@@ -1,13 +1,15 @@
+from os import curdir
 from PyQt5 import uic,QtWidgets,QtGui
 import mysql.connector 
 
-#                                           METODO CONEXÃO COM O BANCO
+
 conexão=mysql.connector.connect(
-        host='localhost',
-        user='root',
-        password='',
-        database='projeto_sco'
+    host='Localhost',
+    user='root',
+    password='',
+    database='projeto_sco' 
 )
+
 #
 #
 #
@@ -104,8 +106,8 @@ def cadastrando_usuario ():
     c_senha = CADASTRAR.C_ConfirmarSenha.text()
 
     if (c_senha == senha):
-        comandoSQL = " INSERT INTO aluno(nome, e_mail, senha)VALUES (%s,%s,%s )"
-        valores=(nome,e_mail,senha)
+        comandoSQL = " INSERT INTO aluno(nome, senha, e_mail)VALUES (%s,%s,%s )"
+        valores=(nome,senha,e_mail)
         try:
             cursor=conexão.cursor()
             cursor.execute(comandoSQL,valores)
@@ -118,8 +120,47 @@ def cadastrando_usuario ():
         print ('As senhas digitadas são diferentes')
 
 
+def autenticando_login ():
+    usuario=LOGIN.C_usuario.text()
+    senha=LOGIN.C_senha.text()
+    comandoSQL="""  SELECT senha FROM  aluno WHERE  nome=(%s)"""
+    valores=(usuario)
     
+    try:
+        cursor=conexão.cursor()
+        cursor.execute(comandoSQL,valores)
+        senha_bd=cursor.fetchone()
+
+        if senha_bd==senha:
+            LOGIN.close()
+            PERFIL.show()
+        
+        
+        else: print('um dos dados inseridos está invalido!')
+
+
+
+
+    except:  
+        print('erro') 
+
+#                                         METODOS CRUD MATERIA
+#***************************************************************************************************** 
 # 
+# 
+#                                         METODOS CRUD RESULTADO_CHAVE
+#*****************************************************************************************************
+
+
+#                                         METODOS CRUD ASSUNTO
+#*****************************************************************************************************
+
+
+
+
+#                                         METODOS CRUD OBJETIVO
+#*****************************************************************************************************
+
 #
 #
 #
@@ -144,7 +185,7 @@ CADASTRAR_OBEJTIVOS = uic.loadUi ("D:\GITHUB\projetoSCO\TELAS.PY\CADASTRAR_OBJET
 MEUS_OBJETIVOS = uic.loadUi ("D:\GITHUB\projetoSCO\TELAS.PY\MEUS_OBJETIVOS.ui")
 DADOS_CONTA = uic.loadUi ("D:\GITHUB\projetoSCO\TELAS.PY\DADOS_CONTA.ui")
 
-LOGIN.B_Entrar.clicked.connect(chama_perfil)
+LOGIN.B_Entrar.clicked.connect(autenticando_login)
 LOGIN.B_Cadastrar.clicked.connect(chama_cadastro)
 
 

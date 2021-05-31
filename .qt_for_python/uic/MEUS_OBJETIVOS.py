@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(733, 569)
+        Dialog.resize(737, 578)
         self.Back_Lista = QtWidgets.QLabel(Dialog)
         self.Back_Lista.setGeometry(QtCore.QRect(0, 0, 221, 581))
         self.Back_Lista.setStyleSheet("background-color: rgb(113, 229, 231);")
