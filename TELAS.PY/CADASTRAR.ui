@@ -13,22 +13,9 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="background">
-   <property name="geometry">
-    <rect>
-     <x>-10</x>
-     <y>-30</y>
-     <width>741</width>
-     <height>571</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(170, 197, 255);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(170, 197, 255);</string>
+  </property>
   <widget class="QLabel" name="img_login_T2">
    <property name="geometry">
     <rect>
@@ -50,7 +37,7 @@
     <rect>
      <x>120</x>
      <y>140</y>
-     <width>141</width>
+     <width>191</width>
      <height>51</height>
     </rect>
    </property>
@@ -59,13 +46,19 @@
    </property>
   </widget>
   <widget class="QLineEdit" name="C_usuario">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>310</x>
      <y>150</y>
      <width>221</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
   <widget class="QLabel" name="email">
@@ -73,7 +66,7 @@
     <rect>
      <x>110</x>
      <y>190</y>
-     <width>141</width>
+     <width>191</width>
      <height>51</height>
     </rect>
    </property>
@@ -84,11 +77,14 @@
   <widget class="QLineEdit" name="C_email">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>310</x>
      <y>200</y>
      <width>221</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
   <widget class="QLabel" name="Senha">
@@ -109,7 +105,7 @@
     <rect>
      <x>90</x>
      <y>280</y>
-     <width>171</width>
+     <width>211</width>
      <height>51</height>
     </rect>
    </property>
@@ -120,11 +116,14 @@
   <widget class="QLineEdit" name="C_senha">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>310</x>
      <y>250</y>
      <width>221</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="echoMode">
     <enum>QLineEdit::Password</enum>
@@ -133,11 +132,14 @@
   <widget class="QLineEdit" name="C_ConfirmarSenha">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>310</x>
      <y>300</y>
      <width>221</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="echoMode">
     <enum>QLineEdit::Password</enum>
@@ -184,6 +186,29 @@ color: rgb(255, 255, 255);</string>
    </property>
    <property name="autoRepeatInterval">
     <number>100</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="aviso">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>420</y>
+     <width>411</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
  </widget>

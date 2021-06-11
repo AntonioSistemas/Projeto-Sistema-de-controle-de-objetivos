@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>768</width>
-    <height>532</height>
+    <width>776</width>
+    <height>523</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(170, 197, 255);</string>
   </property>
   <widget class="QPushButton" name="B_Sair">
    <property name="geometry">
@@ -32,7 +35,7 @@
   <widget class="QPushButton" name="B_Conf_Conta">
    <property name="geometry">
     <rect>
-     <x>-20</x>
+     <x>0</x>
      <y>450</y>
      <width>161</width>
      <height>23</height>
@@ -55,7 +58,8 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">image: url(:/img/USUARIO.png);</string>
+    <string notr="true">image: url(:/img/USUARIO.png);
+background-color: rgb(113, 229, 231);</string>
    </property>
    <property name="text">
     <string/>
@@ -116,24 +120,18 @@
      <height>21</height>
     </rect>
    </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Nome_Usuario&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Back">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>811</width>
-     <height>531</height>
-    </rect>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(170, 197, 255);</string>
+    <string notr="true">background-color: rgb(113, 229, 231);</string>
    </property>
    <property name="text">
-    <string/>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="B_NovoObjetivo">
@@ -218,105 +216,71 @@
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Senha:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="C_email">
+  <widget class="QPushButton" name="B_editar">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>90</y>
-     <width>141</width>
-     <height>21</height>
+     <x>460</x>
+     <y>200</y>
+     <width>111</width>
+     <height>31</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color: rgb(170, 197, 255);</string>
+   </property>
+   <property name="text">
+    <string>Editar/excluir</string>
+   </property>
   </widget>
-  <widget class="QLineEdit" name="C_nome">
+  <widget class="QLabel" name="C_email">
    <property name="geometry">
     <rect>
      <x>310</x>
-     <y>130</y>
-     <width>141</width>
-     <height>21</height>
+     <y>80</y>
+     <width>271</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="C_nome">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>120</y>
+     <width>271</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
   <widget class="QLineEdit" name="C_senha">
    <property name="geometry">
     <rect>
      <x>310</x>
-     <y>170</y>
-     <width>141</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="B_editar_nome">
-   <property name="geometry">
-    <rect>
-     <x>460</x>
-     <y>130</y>
-     <width>31</width>
-     <height>21</height>
+     <y>160</y>
+     <width>271</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">image: url(:/img/EDITAR.png);
-background-color: rgb(170, 197, 255);</string>
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="B_excluir_nome">
-   <property name="geometry">
-    <rect>
-     <x>500</x>
-     <y>130</y>
-     <width>31</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">image: url(:/img/LIXEIRA.png);
-background-color: rgb(170, 197, 255);</string>
-   </property>
-   <property name="text">
-    <string/>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
    </property>
   </widget>
-  <widget class="QPushButton" name="B_editar_senha">
-   <property name="geometry">
-    <rect>
-     <x>460</x>
-     <y>170</y>
-     <width>31</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">image: url(:/img/EDITAR.png);
-background-color: rgb(170, 197, 255);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="B_excluir_senha">
-   <property name="geometry">
-    <rect>
-     <x>500</x>
-     <y>170</y>
-     <width>31</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">image: url(:/img/LIXEIRA.png);
-background-color: rgb(170, 197, 255);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <zorder>Back</zorder>
   <zorder>Back_Lista</zorder>
   <zorder>B_Sair</zorder>
   <zorder>B_Conf_Conta</zorder>
@@ -328,13 +292,10 @@ background-color: rgb(170, 197, 255);</string>
   <zorder>L_email</zorder>
   <zorder>L_nome</zorder>
   <zorder>L_senha</zorder>
+  <zorder>B_editar</zorder>
   <zorder>C_email</zorder>
   <zorder>C_nome</zorder>
   <zorder>C_senha</zorder>
-  <zorder>B_editar_nome</zorder>
-  <zorder>B_excluir_nome</zorder>
-  <zorder>B_editar_senha</zorder>
-  <zorder>B_excluir_senha</zorder>
  </widget>
  <resources>
   <include location="sourcee.qrc"/>

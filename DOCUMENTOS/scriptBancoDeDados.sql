@@ -59,18 +59,25 @@ alter table objetivo
 add foreign key (id_resultado_chave)
 references resultado_chave(id);
 
-select * from aluno;
 
-INSERT INTO aluno(nome, senha, e_mail)VALUES ("joans","12as3","asas1231" );
+desc aluno;
+select nome from objetivo where id_aluno=8;
 
-DELETE FROM aluno WHERE nome='joans';
+INSERT INTO objetivo(nome,id_aluno)VALUES ("sacanear paciencia professor bacalhau",8 );
+
+DELETE FROM aluno WHERE id=10;
 
 SET SQL_SAFE_UPDATES=0;
 
-select senha from aluno where nome='joans';
+ALTER TABLE aluno AUTO_INCREMENT = 1;  
 
+select nome from aluno where nome='joao';
 
+select * from aluno;
 
+update aluno
+set nome='jonas'
+where id='8';
 
-
-
+delete from aluno
+where id='3';

@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>780</width>
-    <height>584</height>
+    <width>822</width>
+    <height>596</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(170, 197, 255);</string>
   </property>
   <widget class="QPushButton" name="B_Conf_Conta">
    <property name="geometry">
@@ -69,23 +72,8 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">image: url(:/img/USUARIO.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Back">
-   <property name="geometry">
-    <rect>
-     <x>-40</x>
-     <y>0</y>
-     <width>871</width>
-     <height>611</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(170, 197, 255);</string>
+    <string notr="true">image: url(:/img/USUARIO.png);
+background-color: rgb(113, 229, 231);</string>
    </property>
    <property name="text">
     <string/>
@@ -162,8 +150,18 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(113, 229, 231);</string>
+   </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Nome_Usuario&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="L_CAD_OBJ">
@@ -235,6 +233,9 @@ color: rgb(255, 255, 255);</string>
      <bold>true</bold>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(113, 229, 231);</string>
+   </property>
    <property name="text">
     <string>Matéria:</string>
    </property>
@@ -254,6 +255,9 @@ color: rgb(255, 255, 255);</string>
      <weight>75</weight>
      <bold>true</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(113, 229, 231);</string>
    </property>
    <property name="text">
     <string>Assunto:</string>
@@ -275,6 +279,9 @@ color: rgb(255, 255, 255);</string>
      <bold>true</bold>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(113, 229, 231);</string>
+   </property>
    <property name="text">
     <string>Objetivo1:</string>
    </property>
@@ -288,6 +295,9 @@ color: rgb(255, 255, 255);</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="C_assunto">
    <property name="geometry">
@@ -298,6 +308,9 @@ color: rgb(255, 255, 255);</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="C_Objetivo1">
    <property name="geometry">
@@ -307,6 +320,9 @@ color: rgb(255, 255, 255);</string>
      <width>261</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
   <widget class="QLabel" name="L_RC_A1">
@@ -323,6 +339,9 @@ color: rgb(255, 255, 255);</string>
      <pointsize>14</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(113, 229, 231);</string>
+   </property>
    <property name="text">
     <string>Resultado-Chave a</string>
    </property>
@@ -335,6 +354,9 @@ color: rgb(255, 255, 255);</string>
      <width>261</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
   <widget class="QLabel" name="L_RC_B1">
@@ -351,6 +373,9 @@ color: rgb(255, 255, 255);</string>
      <pointsize>14</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(113, 229, 231);</string>
+   </property>
    <property name="text">
     <string>Resultado-Chave b</string>
    </property>
@@ -363,6 +388,9 @@ color: rgb(255, 255, 255);</string>
      <width>261</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
   <widget class="QLabel" name="L_objetivo2">
@@ -381,6 +409,9 @@ color: rgb(255, 255, 255);</string>
      <bold>true</bold>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(113, 229, 231);</string>
+   </property>
    <property name="text">
     <string>Objetivo2:</string>
    </property>
@@ -393,6 +424,9 @@ color: rgb(255, 255, 255);</string>
      <width>261</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
   <widget class="QLabel" name="L_RC_A2">
@@ -409,6 +443,9 @@ color: rgb(255, 255, 255);</string>
      <pointsize>14</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(113, 229, 231);</string>
+   </property>
    <property name="text">
     <string>Resultado-Chave a</string>
    </property>
@@ -421,6 +458,9 @@ color: rgb(255, 255, 255);</string>
      <width>261</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
   <widget class="QLabel" name="L_RC_B2">
@@ -437,6 +477,9 @@ color: rgb(255, 255, 255);</string>
      <pointsize>14</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(113, 229, 231);</string>
+   </property>
    <property name="text">
     <string>Resultado-Chave b</string>
    </property>
@@ -450,8 +493,10 @@ color: rgb(255, 255, 255);</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
   </widget>
-  <zorder>Back</zorder>
   <zorder>Back_Lista</zorder>
   <zorder>B_Conf_Conta</zorder>
   <zorder>B_NovoObjetivo</zorder>

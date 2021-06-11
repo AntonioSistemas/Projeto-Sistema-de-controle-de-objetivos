@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>737</width>
-    <height>578</height>
+    <width>741</width>
+    <height>587</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(170, 197, 255);</string>
   </property>
   <widget class="QLabel" name="Back_Lista">
    <property name="geometry">
@@ -29,22 +32,6 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="Back">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>871</width>
-     <height>611</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(170, 197, 255);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QLabel" name="Img_User">
    <property name="geometry">
     <rect>
@@ -55,7 +42,8 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">image: url(:/img/USUARIO.png);</string>
+    <string notr="true">image: url(:/img/USUARIO.png);
+background-color: rgb(113, 229, 231);</string>
    </property>
    <property name="text">
     <string/>
@@ -175,8 +163,18 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(113, 229, 231);</string>
+   </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Nome_Usuario&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QTableWidget" name="T_materia">
@@ -395,7 +393,6 @@
     </property>
    </row>
   </widget>
-  <zorder>Back</zorder>
   <zorder>Back_Lista</zorder>
   <zorder>NomeUsuario</zorder>
   <zorder>B_Sair</zorder>
