@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>999</width>
-    <height>585</height>
+    <width>1007</width>
+    <height>563</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,27 +16,11 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(170, 197, 255);</string>
   </property>
-  <widget class="QLabel" name="Back_Lista">
-   <property name="geometry">
-    <rect>
-     <x>-10</x>
-     <y>-10</y>
-     <width>211</width>
-     <height>801</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(113, 229, 231);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QLabel" name="Img_User">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>0</y>
+     <x>70</x>
+     <y>10</y>
      <width>81</width>
      <height>91</height>
     </rect>
@@ -49,66 +33,36 @@ background-color: rgb(113, 229, 231);</string>
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="NomeUsuario">
+  <widget class="QPushButton" name="B_Conf_Conta">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>90</y>
-     <width>181</width>
-     <height>41</height>
+     <x>0</x>
+     <y>510</y>
+     <width>161</width>
+     <height>23</height>
     </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>16</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(113, 229, 231);</string>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <string>Configurações de conta</string>
    </property>
   </widget>
-  <widget class="QLabel" name="l_sejabemvindo">
+  <widget class="QLabel" name="mensagem">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>20</y>
-     <width>291</width>
-     <height>41</height>
+     <x>240</x>
+     <y>70</y>
+     <width>721</width>
+     <height>81</height>
     </rect>
    </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;SEJA BEM-VINDO&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="NomeUsuario_Meio">
-   <property name="geometry">
-    <rect>
-     <x>430</x>
-     <y>60</y>
-     <width>261</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>16</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 197, 255);</string>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600; color:#a061ff;&quot;&gt;Objetivo Cadastrado, vá até &amp;quot;meus objetivos&amp;quot;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600; color:#a061ff;&quot;&gt;para ver. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="B_MeusObjetivos">
@@ -118,8 +72,8 @@ background-color: rgb(113, 229, 231);</string>
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>160</y>
-     <width>201</width>
+     <y>150</y>
+     <width>221</width>
      <height>31</height>
     </rect>
    </property>
@@ -148,8 +102,8 @@ background-color: rgb(113, 229, 231);</string>
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>210</y>
-     <width>201</width>
+     <y>190</y>
+     <width>221</width>
      <height>31</height>
     </rect>
    </property>
@@ -174,7 +128,7 @@ background-color: rgb(113, 229, 231);</string>
   <widget class="QPushButton" name="B_Sair">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>0</x>
      <y>540</y>
      <width>41</width>
      <height>23</height>
@@ -187,25 +141,54 @@ background-color: rgb(113, 229, 231);</string>
     <string>Sair</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="B_Conf_Conta">
+  <widget class="QLabel" name="Back_Lista">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>520</y>
-     <width>131</width>
-     <height>23</height>
+     <x>0</x>
+     <y>0</y>
+     <width>221</width>
+     <height>581</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(113, 229, 231);</string>
    </property>
    <property name="text">
-    <string>Configurações de conta</string>
+    <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="NomeUsuario">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>100</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(113, 229, 231);</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <zorder>Back_Lista</zorder>
+  <zorder>Img_User</zorder>
+  <zorder>B_Conf_Conta</zorder>
+  <zorder>mensagem</zorder>
+  <zorder>B_MeusObjetivos</zorder>
+  <zorder>B_NovoObjetivo</zorder>
+  <zorder>B_Sair</zorder>
+  <zorder>NomeUsuario</zorder>
  </widget>
- <resources>
-  <include location="sourcee.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

@@ -1,13 +1,13 @@
 from os import curdir, system
 from re import X
 from PyQt5 import uic,QtWidgets,QtGui
-import mysql.connector 
+import mysql.connector
 
 
 conexão=mysql.connector.connect(
     host='Localhost',
     user='root',
-    password='',
+    password='jonas123',
     database='projeto_sco' 
 )
 id_global=str(0)
@@ -293,25 +293,47 @@ def excluir_user():
         EDITAR_USER.aviso.setText("erro ao excluir usuario")
 
 
+def chama_assunto():
+    Perfil.close()
+    LOGIN.close()
+    CADASTRAR.close()
+    EDITAR_OBJETIVO.close()
+    DADOS_CONTA.close()
+    EDITAR_USER.close()
+    ICAD_OBJETIVO.close()
+    ICAD_CHAVE.close()
+    MENSAGEM_CAD.close()
+    MENSAGEM_CAD_2.close()
+    MEUS_OBJETIVOS.close()
+    ICAD_MATERIA.close()
+    ICAD_ASSUNTO.show()
+    global recebendo_materia
 
 
 
 
-#                                         METODOS CRUD MATERIA
-#***************************************************************************************************** 
-# 
- 
-#                                         METODOS CRUD RESULTADO_CHAVE
-#*****************************************************************************************************
+
+    ICAD_ASSUNTO.C_assunto.setText("")
+
+    recebendo_materia=ICAD_MATERIA.C_materia.text()
+    print(recebendo_materia)
+    
+    COMANDOSQL="INSERT INTO materia(nome,id_aluno) VALUES ('"+recebendo_materia+"', '"+id_global+"')"
+    try:
+        cursor=conexão.cursor()
+        cursor.execute(COMANDOSQL) 
+        conexão.commit()
+        cursor.close()
+        print("Inserido materia")
+    except:
+        print("erro")
 
 
-#                                         METODOS CRUD ASSUNTO
-#*****************************************************************************************************
-
-
-#                                         METODOS CRUD OBJETIVO
-#*****************************************************************************************************
-
+    #BOTOES NA TELA CADASTRAR ASSUNTO
+    ICAD_ASSUNTO.B_MeusObjetivos.clicked.connect(chama_meus_objetivos)
+    ICAD_ASSUNTO.B_Conf_Conta.clicked.connect(chama_dados_conta)
+    ICAD_ASSUNTO.B_Sair.clicked.connect(chama_login)
+    ICAD_ASSUNTO.proximo.clicked.connect(chama_objetivo)
 #
 #
 #
@@ -320,21 +342,23 @@ def excluir_user():
 #
 #
 #
-#
-#
-#
-
 #                                      IMPORTANDO TELAS. 
 #*****************************************************************************************************
 
 app=QtWidgets.QApplication([])
-LOGIN = uic.loadUi ("D:\GITHUB\projetoSCO\TELAS.PY\LOGIN.ui")
-Perfil = uic.loadUi ("D:\GITHUB\projetoSCO\TELAS.PY\Perfil.ui")
-CADASTRAR = uic.loadUi ("D:\GITHUB\projetoSCO\TELAS.PY\CADASTRAR.ui")
-CADASTRAR_OBEJTIVOS = uic.loadUi ("D:\GITHUB\projetoSCO\TELAS.PY\CADASTRAR_OBJETIVOS.ui")
-MEUS_OBJETIVOS = uic.loadUi ("D:\GITHUB\projetoSCO\TELAS.PY\MEUS_OBJETIVOS.ui")
-DADOS_CONTA = uic.loadUi ("D:\GITHUB\projetoSCO\TELAS.PY\DADOS_CONTA.ui")
-EDITAR_USER = uic.loadUi ("D:\GITHUB\projetoSCO\TELAS.PY\EDITAR_USER.ui")
+LOGIN = uic.loadUi ("/home/sthefany/Documentos/projetosco/TELAS.PY/LOGIN.ui")
+Perfil = uic.loadUi ("/home/sthefany/Documentos/projetosco/TELAS.PY/Perfil.ui")
+CADASTRAR = uic.loadUi ("/home/sthefany/Documentos/projetosco/TELAS.PY/CADASTRAR.ui")
+EDITAR_OBJETIVO = uic.loadUi ("/home/sthefany/Documentos/projetosco/TELAS.PY/EDITAR_OBJETIVO.ui")
+MEUS_OBJETIVOS = uic.loadUi ("/home/sthefany/Documentos/projetosco/TELAS.PY/MEUS_OBJETIVOS.ui")
+DADOS_CONTA = uic.loadUi ("/home/sthefany/Documentos/projetosco/TELAS.PY/DADOS_CONTA.ui")
+EDITAR_USER = uic.loadUi ("/home/sthefany/Documentos/projetosco/TELAS.PY/EDITAR_USER.ui")
+ICAD_MATERIA = uic.loadUi ("/home/sthefany/Documentos/projetosco/TELAS.PY/CAD_MATERIA.ui")
+ICAD_ASSUNTO = uic.loadUi ("/home/sthefany/Documentos/projetosco/TELAS.PY/CAD_ASSUNTO.ui")
+ICAD_OBJETIVO = uic.loadUi ("/home/sthefany/Documentos/projetosco/TELAS.PY/CAD_OBJETIVO.ui")
+ICAD_CHAVE = uic.loadUi ("/home/sthefany/Documentos/projetosco/TELAS.PY/CAD_CHAVE.ui")
+MENSAGEM_CAD = uic.loadUi ("/home/sthefany/Documentos/projetosco/TELAS.PY/MENSAGEM_CAD.ui")
+MENSAGEM_CAD_2 = uic.loadUi ("/home/sthefany/Documentos/projetosco/TELAS.PY/MENSAGEM_CAD_2.ui")
 
 #BOTOES NA TELA DE LOGIN
 LOGIN.B_Entrar.clicked.connect(autenticando_login)
@@ -343,4 +367,4 @@ LOGIN.B_Cadastrar.clicked.connect(chama_cadastro)
 
 LOGIN.show()
 app.exec()
-#*******************************************************************************************************
+#*******************************************************************************************************def chama_assunto():
